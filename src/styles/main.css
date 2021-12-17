@@ -2,12 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  min-height: 650px;
+  min-height: 100vh;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -45,7 +44,8 @@ a {
 }
 
 .container {
-  margin: 0 5rem;
+  padding: 32px;
+  flex: 1;
 }
 
 .open {
@@ -85,7 +85,7 @@ a.skip:focus {
 */
 
 nav {
-  padding: 0.2rem 0;
+  padding: 8px 32px;
   position: sticky;
   top: 0;
   background: #fff;
@@ -93,7 +93,7 @@ nav {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-nav .container {
+nav .d-flex {
   justify-content: space-between;
   align-items: center;
 }
@@ -127,7 +127,7 @@ nav li a {
   color: #000;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 nav li hr {
@@ -155,7 +155,7 @@ ul#mobile-nav {
 .logo h1 {
   display: inline-block;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .logo .fas.fa-utensils {
@@ -181,7 +181,7 @@ ul#mobile-nav {
 ** Hero Element Styling 
 */
 header {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .hero-image {
@@ -197,23 +197,21 @@ header {
 ** Restaurant styling 
 */
 .restaurant-list {
-  display: flex;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  justify-content: space-between;
-  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  /* margin: 32px; */
 }
 
 .restaurant {
-  width: 350px;
   background: #fff;
-  margin-bottom: 2.5rem;
+
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .restaurant .content {
-  padding: 4px 18px;
+  padding: 10px 24px;
 }
 
 .restaurant .image {
@@ -257,11 +255,11 @@ i.fas.fa-map-marker-alt {
 }
 
 .restaurant p.description {
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 

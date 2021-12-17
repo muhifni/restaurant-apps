@@ -9,7 +9,6 @@
   }
 }
 
-
 @media screen and (max-width: 900px) {
   .restaurant {
     width: 350px;
@@ -23,10 +22,6 @@
 }
 
 @media screen and (max-width: 780px) {
-  .container {
-    margin: 0 3rem;
-  }
-
   .restaurant {
     width: 300px;
   }
@@ -60,7 +55,7 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   #hamburger,
   #mobile-nav {
     display: none;
@@ -68,10 +63,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .container {
-    margin: 0 2rem;
-  }
-
   .restaurant .image {
     height: 300px;
   }
@@ -82,10 +73,6 @@
 }
 
 @media screen and (max-width: 380px) {
-  .container {
-    margin: 0 1.2rem;
-  }
-
   nav li a {
     font-size: 16px;
   }
@@ -104,17 +91,20 @@
 }
 
 @media screen and (min-width: 900px) {
-  .restaurant {
-    width: 250px;
-  }
-
-  .container {
-    margin: 0 3.5rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-image {
     min-width: 1000px;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restaurant-list {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
