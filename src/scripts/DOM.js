@@ -42,7 +42,7 @@ hamburgerElement.addEventListener('click', (event) => {
  */
 dataRestaurant.forEach((resto) => {
   restaurantListElement.innerHTML += `
-        <div class="restaurant">
+        <div class="restaurant" tabindex="0">
             <img src="${resto.pictureId}"
                 class="image" alt="restaurant image">
             <div class="content">
