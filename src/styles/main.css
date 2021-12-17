@@ -6,6 +6,7 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   min-height: 650px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -52,7 +53,7 @@ a {
 }
 
 h2 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h3 {
@@ -179,7 +180,7 @@ ul#mobile-nav {
 /* 
 ** Hero Element Styling 
 */
-header {  
+header {
   margin-bottom: 4rem;
 }
 
@@ -256,12 +257,12 @@ i.fas.fa-map-marker-alt {
 }
 
 .restaurant p.description {
-  font-size: 14px;      
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 }
 
 /* 
