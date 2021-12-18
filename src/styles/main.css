@@ -85,7 +85,7 @@ a.skip:focus {
 */
 
 nav {
-  padding: 8px 32px;
+  padding: 12px 32px;
   position: sticky;
   top: 0;
   background: #fff;
@@ -154,12 +154,12 @@ ul#mobile-nav {
 */
 .logo h1 {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 
-.logo .fas.fa-utensils {
-  font-size: 28px;
+.logo i {
+  font-size: 36px;
   font-weight: 300;
   margin-right: 2px;
 }
@@ -200,7 +200,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  /* margin: 32px; */
+  margin-top: 1rem;
 }
 
 .restaurant {
