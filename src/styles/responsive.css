@@ -3,29 +3,9 @@
     width: 100%;
     justify-content: space-around;
   }
-
-  .restaurant {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .restaurant {
-    width: 350px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .restaurant {
-    width: 320px;
-  }
 }
 
 @media screen and (max-width: 780px) {
-  .restaurant {
-    width: 300px;
-  }
-
   .restaurant p.description {
     font-size: 16px;
   }
@@ -35,19 +15,16 @@
   .restaurant .image {
     height: 325px;
   }
-
-  .restaurant {
-    width: 100%;
-  }
 }
 
-@media screen and (max-width: 600px) {
-  nav ul {
-    justify-content: center;
-  }
-
-  #desktop-nav {
-    display: none;
+@media screen and (max-width: 650px) {
+  #menu-container {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(0px, -200px);
+    right: 0px;
   }
 
   .hero-image {
@@ -90,7 +67,16 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (min-width: 1200px) {

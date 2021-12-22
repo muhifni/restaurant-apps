@@ -15,27 +15,27 @@ const mobileNavElement = document.getElementById('mobile-nav');
 /*
  * hide and show navbar
  */
-document.addEventListener('mousewheel', (event) => {
-  if (event.wheelDelta >= 0) {
-    console.log('up');
-    navBar.classList.remove('nav__hide');
-    navBar.classList.add('nav__show');
-  } else {
-    console.log('down');
-    navBar.classList.remove('nav__show');
-    navBar.classList.add('nav__hide');
-    mobileNavElement.classList.remove('open');
-  }
-});
+// document.addEventListener('mousewheel', (event) => {
+//   if (event.wheelDelta >= 0) {
+//     // console.log('up');
+//     navBar.classList.remove('nav__hide');
+//     navBar.classList.add('nav__show');
+//   } else {
+//     // console.log('down');
+//     navBar.classList.remove('nav__show');
+//     navBar.classList.add('nav__hide');
+//     mobileNavElement.classList.remove('open');
+//   }
+// });
 
 /*
  * hide and show mobile menu
  */
-hamburgerElement.addEventListener('click', (event) => {
-  mobileNavElement.classList.toggle('open');
+// hamburgerElement.addEventListener('click', (event) => {
+//   mobileNavElement.classList.toggle('open');
 
-  event.stopPropagation();
-});
+//   event.stopPropagation();
+// });
 
 /*
  * menyajikan data restoran

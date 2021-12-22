@@ -49,7 +49,9 @@ a {
 }
 
 .open {
-  transform: translate(0px, 12px) !important;
+  /* transform: translate(0px, 12px) !important; */
+  transform: translate(0px, 100px) !important;
+  right: 0 !important;
 }
 
 h2 {
@@ -132,21 +134,6 @@ nav li a {
 
 nav li hr {
   position: relative;
-}
-
-/**
-** mobile nav 
-*/
-ul#mobile-nav {
-  background: #9ba5a7;
-  transform: translate(0px, -105px);
-  transition: transform 0.3s ease-in-out;
-  position: absolute;
-  width: 100%;
-}
-
-#mobile-nav li {
-  border-bottom: none;
 }
 
 /* 
