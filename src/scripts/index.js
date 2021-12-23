@@ -14,3 +14,11 @@ const app = new App({
   navBar: document.querySelector('nav'),
   mainMenu: document.querySelector('.menu-container'),
 });
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});

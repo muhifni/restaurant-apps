@@ -29,11 +29,11 @@ const DrawerInitiator = {
    */
   _scrollDetection(event, navBar, mainMenu) {
     if (event.wheelDelta >= 0) {
-      console.log('up');
+      // console.log('up');
       navBar.classList.remove('nav__hide');
       navBar.classList.add('nav__show');
     } else {
-      console.log('down');
+      // console.log('down');
       navBar.classList.remove('nav__show');
       navBar.classList.add('nav__hide');
       mainMenu.classList.remove('open');
