@@ -25,6 +25,7 @@
     transition: transform 0.3s ease-in-out;
     transform: translate(0px, -200px);
     right: 0px;
+    /* top: -126px; */
   }
 
   .hero-image {

@@ -1,11 +1,11 @@
 const DrawerInitiator = {
   init({hamburgerBtn, content, rootPage, navBar, mainMenu}) {
     hamburgerBtn.addEventListener('click', (event) => {
-      this._toggleHamburger(event, mainMenu);
+      this._toggleMenu(event, mainMenu);
     });
 
     content.addEventListener('click', (event) => {
-      this._cloneHamburger(event, hamburgerBtn);
+      this._cloneHamburger(event, mainMenu);
     });
 
     rootPage.addEventListener('mousewheel', (event) => {
@@ -13,15 +13,15 @@ const DrawerInitiator = {
     });
   },
 
-  _toggleHamburger(event, mainMenu) {
+  _toggleMenu(event, mainMenu) {
     console.log('open');
     event.stopPropagation();
     mainMenu.classList.toggle('open');
   },
 
-  _cloneHamburger(event, hamburger) {
+  _cloneHamburger(event, mainMenu) {
     event.stopPropagation();
-    hamburger.classList.remove('open');
+    mainMenu.classList.remove('open');
   },
 
   /*
