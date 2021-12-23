@@ -1,3 +1,5 @@
+const {default: CONFIG} = require('../globals/config');
+
 class RestaurantItem extends HTMLElement {
   constructor() {
     super();
@@ -15,7 +17,7 @@ class RestaurantItem extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="restaurant" tabindex="0">
-          <img src="${this._restaurant.pictureId}"
+          <img src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}"
               class="image" alt="restaurant image">
           <div class="content">
               <h3 class="name"><a href="#">${this._restaurant.name}</a></h3>
