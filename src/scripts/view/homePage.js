@@ -1,10 +1,8 @@
-import '../components/home-page';
 import RestaurantSource from '../data/restaurant-source';
 import '../components/restaurant-item';
 
 const HomePage = {
   async render() {
-    // const HomePageElement = document.createElement('home-page');
     return `
     <div class="container">
             <section id="restaurant-container" class="restaurant-container">
