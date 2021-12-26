@@ -20,7 +20,9 @@ class RestaurantItem extends HTMLElement {
           <img src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}"
               class="image" alt="restaurant image">
           <div class="content">
-              <h3 class="name"><a href="#">${this._restaurant.name}</a></h3>
+              <h3 class="name"><a href="#/detail/${this._restaurant.id}">${
+      this._restaurant.name
+    }</a></h3>
               <div class="rating d-inline-block">
                   <i class="fas fa-star"></i>
                   <p>${this._restaurant.rating}</p>

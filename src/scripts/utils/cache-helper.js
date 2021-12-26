@@ -1,3 +1,5 @@
+import CONFIG from '../globals/config';
+
 const CacheHelper = {
   // caching app shell
   async cachingAppShell(request) {
@@ -9,7 +11,7 @@ const CacheHelper = {
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames
-      .filter((name) => name !== 'RestaurantList-V1')
+      .filter((name) => name !== CONFIG.CACHE_NAME)
       .map((filteredName) => caches.delete(filteredName));
   },
 
@@ -27,7 +29,7 @@ const CacheHelper = {
 
   // membuka/membuat caches
   async _openCache() {
-    return caches.open('RestaurantList-V1');
+    return caches.open(CONFIG.CACHE_NAME);
   },
 
   // melakukan fetch request
@@ -38,7 +40,7 @@ const CacheHelper = {
       return response;
     }
 
-    await this.addCache(request);
+    await this._addCache(request);
     return response;
   },
 
