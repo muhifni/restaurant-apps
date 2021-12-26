@@ -267,23 +267,16 @@ i.fas.fa-map-marker-alt {
   margin: 8px 0;
 }
 
+.detail_image {
+  margin-bottom: 10px;
+}
+
 .detail_image img {
   width: 100%;
 }
 
-.detail_title {
-  display: grid;
-  gap: 8px;
-}
-
-.detail_address {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.detail_info {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.detail_city {
+  margin-right: 30px;
 }
 
 .detail_category p {
@@ -292,6 +285,7 @@ i.fas.fa-map-marker-alt {
   background-color: hsl(0deg 0% 90%);
   border-radius: 6px;
   margin-right: 8px;
+  margin-top: 5px;
 }
 
 .detail_content {
@@ -326,19 +320,12 @@ i.fas.fa-map-marker-alt {
   width: 40px;
 }
 
-.review_name {
-  /* grid-column-start: 2;
-  grid-column-end: 6; */
-}
-
 .review_date p {
   font-size: 14px;
   color: #111111;
 }
 
 .review_text {
-  /* grid-column-start: 1;
-  grid-column-end: 17; */
   background-color: #e3e3e3;
   border-radius: 4px;
   padding: 10px;

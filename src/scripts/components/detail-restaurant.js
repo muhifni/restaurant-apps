@@ -17,21 +17,19 @@ class DetailRestaurant extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="detail_image">
-          <img src="${CONFIG.BASE_IMAGE_URL_LARGE} + ${
+          <img src="${CONFIG.BASE_IMAGE_URL_LARGE}${
       this._restaurant.pictureId
     }" alt="restaurant image">
         </div>
         <div class="detail_title">
-          <h2>${this._restaurant.name}</h2>
-          <div class="detail_info">
-            <div class="detail_city">
-              <i class="fas fa-map-marker-alt"></i>
-              <p class="d-inline-block">${this._restaurant.name}</p>
-            </div>
-            <div class="detail_address">
-                <i class="fas fa-map-marked-alt"></i>
-                <p class="d-inline-block">${this._restaurant.address}</p>
-            </div>
+          <h2>${this._restaurant.name}</h2>          
+          <div class="detail_city d-inline-block">
+            <i class="fas fa-map-marker-alt"></i>
+            <p class="d-inline-block">${this._restaurant.city}</p>
+          </div>
+          <div class="detail_address d-inline-block">
+              <i class="fas fa-map-marked-alt"></i>
+              <p class="d-inline-block">${this._restaurant.address}</p>
           </div>          
           <div class="detail_category">
               ${this._categoryRestaurant()}
@@ -70,26 +68,33 @@ class DetailRestaurant extends HTMLElement {
 
   _categoryRestaurant() {
     const categories = this._restaurant.categories;
+    let memory = '';
     categories.forEach((categorie) => {
-      return `<p>${categorie}</p>`;
+      memory += `<p>${categorie.name}</p>`;
     });
+    return memory;
   }
 
   _foods() {
+    let memory = '';
     this._restaurant.menus.foods.forEach((food) => {
-      return `<li>${food}</li>`;
+      memory += `<li>${food.name}</li>`;
     });
+    return memory;
   }
 
   _drinks() {
+    let memory = '';
     this._restaurant.menus.drinks.forEach((drink) => {
-      return `<li>${drink}</li>`;
+      memory += `<li>${drink.name}</li>`;
     });
+    return memory;
   }
 
   _reviewer() {
+    let memory = '';
     this._restaurant.customerReviews.forEach((reviewer) => {
-      return `
+      memory += `
         <div class="detail_review">
           <div class="d-flex">
             <div class="review_image">
@@ -108,6 +113,7 @@ class DetailRestaurant extends HTMLElement {
         </div>
       `;
     });
+    return memory;
   }
 }
 

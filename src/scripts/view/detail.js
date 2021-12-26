@@ -5,8 +5,7 @@ import '../components/detail-restaurant';
 const Detail = {
   async render() {
     return `
-    <div class="container">
-      <h2>Detail Page</h2>
+    <div class="container">      
       <div class="detail_container">        
                 
       </div>
