@@ -18,7 +18,9 @@ const HomePage = {
     // fungsi yang dijalankan setelah render
     const restaurants = await RestaurantSource.restaurantList();
     const restaurantListElement = document.querySelector('.restaurant-list');
+    const headerElement = document.querySelector('header');
 
+    headerElement.innerHTML = '<div class="hero-image"></div>';
     restaurants.forEach((restaurant) => {
       const restaurantItem = document.createElement('restaurant-item');
       restaurantItem.restaurant = restaurant;
