@@ -21,8 +21,8 @@ class RestaurantItem extends HTMLElement {
               class="image" alt="restaurant image">
           <div class="content">
               <h3 class="name"><a href="#/detail/${this._restaurant.id}">${
-      this._restaurant.name
-    }</a></h3>
+  this._restaurant.name
+}</a></h3>
               <div class="rating d-inline-block">
                   <i class="fas fa-star"></i>
                   <p>${this._restaurant.rating}</p>

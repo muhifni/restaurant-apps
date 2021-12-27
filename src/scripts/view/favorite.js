@@ -21,7 +21,6 @@ const Favorite = {
       const restaurantItem = document.createElement('restaurant-item');
       restaurantItem.restaurant = restaurant;
       restaurantListElement.appendChild(restaurantItem);
-      console.log(restaurantListElement);
     });
   },
 };

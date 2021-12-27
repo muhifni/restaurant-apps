@@ -11,12 +11,12 @@ const CacheHelper = {
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames
-      .filter((name) => name !== CONFIG.CACHE_NAME)
-      .map((filteredName) => caches.delete(filteredName));
+        .filter((name) => name !== CONFIG.CACHE_NAME)
+        .map((filteredName) => caches.delete(filteredName));
   },
 
   /* memasukkan atau menambahkan fetch request ke caches
-   * menggunakan teknik stale while revalidate */
+     * menggunakan teknik stale while revalidate */
   async revalidateCache(request) {
     const response = await caches.match(request);
 
