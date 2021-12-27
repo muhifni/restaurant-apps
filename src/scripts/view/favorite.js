@@ -15,13 +15,13 @@ const Favorite = {
   async afterRender() {
     // fungsi yang dijalankan setelah render
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
-    const restaurantListElement = document.querySelector('.detail_container');
+    const restaurantListElement = document.querySelector('.restaurant-list');
 
     restaurants.forEach((restaurant) => {
       const restaurantItem = document.createElement('restaurant-item');
       restaurantItem.restaurant = restaurant;
-      //restaurantListElement.appendChild(restaurantItem);
-      console.log(restaurant);
+      restaurantListElement.appendChild(restaurantItem);
+      console.log(restaurantListElement);
     });
   },
 };
