@@ -7,8 +7,16 @@ const Detail = {
   async render() {
     return `
     <div class="container">      
+      <div id="likeButtonContainer"></div>
       <div class="detail_container">
-        <div id="likeButtonContainer"></div>
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
       </div>
     </div>
@@ -24,6 +32,7 @@ const Detail = {
     const headerElement = document.querySelector('header');
 
     headerElement.innerHTML = '';
+    detailContainer.innerHTML = '';
     detailRestaurantElement.restaurant = restaurant;
     detailContainer.appendChild(detailRestaurantElement);
     LikeButtonInitiator.init({

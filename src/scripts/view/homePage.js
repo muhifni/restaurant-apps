@@ -8,7 +8,14 @@ const HomePage = {
             <section id="restaurant-container" class="restaurant-container">
                 <h2>Explore Restaurant</h2>
                 <div class="restaurant-list">                    
-
+                  <div class="gooey">
+                      <span class="dot"></span>
+                      <div class="dots">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
                 </div>
             </section>
         </div>`;
@@ -20,6 +27,7 @@ const HomePage = {
     const restaurantListElement = document.querySelector('.restaurant-list');
     const headerElement = document.querySelector('header');
 
+    restaurantListElement.innerHTML = '';
     headerElement.innerHTML = '<div class="hero-image"></div>';
     restaurants.forEach((restaurant) => {
       const restaurantItem = document.createElement('restaurant-item');
