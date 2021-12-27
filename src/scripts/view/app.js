@@ -1,14 +1,16 @@
+import {createPreloader} from '../../templates/template-creator';
 import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
-  constructor({hamburgerBtn, content, rootPage, navBar, mainMenu}) {
+  constructor({hamburgerBtn, content, rootPage, navBar, mainMenu, restaurantList}) {
     this._hamburgerBtn = hamburgerBtn;
     this._content = content;
     this._rootPage = rootPage;
     this._navbar = navBar;
     this._mainMenu = mainMenu;
+    this._restaurantList = restaurantList;
 
     this._initialAppShell();
   }
@@ -26,6 +28,7 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
+    this._restaurantList.innerHTML = createPreloader();
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }

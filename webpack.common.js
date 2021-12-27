@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(s(a|c)ss)$/,
         use: [
           {
             loader: 'style-loader',

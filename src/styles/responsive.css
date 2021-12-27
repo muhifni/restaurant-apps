@@ -31,6 +31,11 @@
   .hero-image {
     height: 250px;
   }
+
+  .list-menu {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
 
 @media screen and (min-width: 650px) {

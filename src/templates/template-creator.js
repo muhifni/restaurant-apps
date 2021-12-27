@@ -10,4 +10,15 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export {createLikeButtonTemplate, createLikedButtonTemplate};
+const createPreloader = () => `
+  <div class="gooey">
+    <span class="dot"></span>
+      <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </div>
+`;
+
+export {createLikeButtonTemplate, createLikedButtonTemplate, createPreloader};
