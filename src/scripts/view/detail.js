@@ -21,9 +21,9 @@ const Detail = {
     const restaurant = await RestaurantSource.detailRestaurant(url.id);
     const detailContainer = document.querySelector('.detail_container');
     const detailRestaurantElement = document.createElement('detail-restaurant');
-    const headerElement = document.createElement('header');
+    const headerElement = document.querySelector('header');
 
-    headerElement.innerHTML = ``;
+    headerElement.innerHTML = '';
     detailRestaurantElement.restaurant = restaurant;
     detailContainer.appendChild(detailRestaurantElement);
     LikeButtonInitiator.init({
