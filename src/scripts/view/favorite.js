@@ -1,10 +1,28 @@
+import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb';
+
 const Favorite = {
   async render() {
-    return `<h2>Favorite</h2>`;
+    return `
+    <div class="container">
+      <section id="restaurant-container" class="restaurant-container">
+          <h2>Your Favorite Restaurant</h2>
+          <div class="restaurant-list">                    
+          </div>
+      </section>
+    </div>`;
   },
 
   async afterRender() {
     // fungsi yang dijalankan setelah render
+    const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    const restaurantListElement = document.querySelector('.detail_container');
+
+    restaurants.forEach((restaurant) => {
+      const restaurantItem = document.createElement('restaurant-item');
+      restaurantItem.restaurant = restaurant;
+      //restaurantListElement.appendChild(restaurantItem);
+      console.log(restaurant);
+    });
   },
 };
 
