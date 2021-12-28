@@ -24,8 +24,7 @@
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
     transform: translate(0px, -200px);
-    right: 0px;
-    /* top: -126px; */
+    right: 0px;    
   }
 
   .hero-image {
@@ -36,12 +35,21 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
+
+  .gooey {
+    grid-column-start: 1;
+  }
 }
 
 @media screen and (min-width: 650px) {
   #hamburger,
   #mobile-nav {
     display: none;
+  }
+
+  .gooey {
+    grid-column-start: 2;
+    grid-column-end: 4;
   }
 }
 

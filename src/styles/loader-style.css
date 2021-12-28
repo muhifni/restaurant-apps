@@ -5,8 +5,8 @@
     height: 42px;      
     background: white;
     filter: contrast(20);
-    grid-column-start: 2;
-    grid-column-end: 4;      
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
     margin: 0 auto;
     margin-top: 150px;
     margin-bottom: 150px;
