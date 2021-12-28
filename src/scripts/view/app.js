@@ -26,7 +26,11 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    console.log(this._restaurantList);
+    const skipLinkElem = document.querySelector('.skip');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#main').focus();
+    });
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }

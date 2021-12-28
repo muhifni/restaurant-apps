@@ -1,6 +1,7 @@
 const DrawerInitiator = {
   init({hamburgerBtn, content, rootPage, navBar, mainMenu}) {
     hamburgerBtn.addEventListener('click', (event) => {
+      event.preventDefault();
       this._toggleMenu(event, mainMenu);
     });
 
