@@ -204,6 +204,10 @@ header img {
   object-fit: cover;
 }
 
+.restaurant-container {
+  min-height: 265px;
+}
+
 .rating,
 .city {
   font-size: 0.9rem;
