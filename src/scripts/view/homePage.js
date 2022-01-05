@@ -1,5 +1,6 @@
 import RestaurantSource from '../data/restaurant-source';
 import '../components/restaurant-item';
+import '../components/hero-image';
 
 const HomePage = {
   async render() {
@@ -25,10 +26,11 @@ const HomePage = {
     // fungsi yang dijalankan setelah render
     const restaurants = await RestaurantSource.restaurantList();
     const restaurantListElement = document.querySelector('.restaurant-list');
+    const heroImageELement = document.createElement('hero-image');
     const headerElement = document.querySelector('header');
 
     restaurantListElement.innerHTML = '';
-    headerElement.innerHTML = '<div class="hero-image"></div>';
+    headerElement.appendChild(heroImageELement);
     restaurants.forEach((restaurant) => {
       const restaurantItem = document.createElement('restaurant-item');
       restaurantItem.restaurant = restaurant;

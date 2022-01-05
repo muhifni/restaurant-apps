@@ -9,7 +9,6 @@ var serviceWorkerOption = {
     "/icons/icon-64x64.png",
     "/images/avatar_circle.png",
     "/images/favicon.png",
-    "/images/heros/hero-image_2.jpg",
     "/index.html"
   ]
 };
