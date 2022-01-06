@@ -11,7 +11,14 @@ var serviceWorkerOption = {
     "/icons/icon-64x64.png",
     "/images/avatar_circle.png",
     "/images/favicon.png",
-    "/index.html"
+    "/index.html",
+    "/icons/icon-256x256.webp",
+    "/icons/icon-384x384.webp",
+    "/images/favicon.webp",
+    "/icons/icon-64x64.webp",
+    "/icons/icon-512x512.webp",
+    "/images/avatar_circle.webp",
+    "/icons/icon-192x192.webp"
   ]
 };
         
