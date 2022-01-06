@@ -5,11 +5,11 @@ const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="likeButtonContainer"></div>';
 }
 
-beforeEach(() => {
-  addLikeButtonContainer();
-})
-
 describe('Favorite A Restaurant', () => {
+  beforeEach(() => {
+    addLikeButtonContainer();
+  })
+
   it('should show the like button when the restaurant has not been favorited', async () => {    
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
