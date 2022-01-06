@@ -1,7 +1,7 @@
 Feature('Favorite Restaurant');
 
 Before(({I}) => {
-  I.amOnPage('/favorite');
+  I.amOnPage('/#/favorite');
 });
 
 Scenario('showing empty favorite restaurant', ({I}) => {
@@ -19,7 +19,7 @@ Scenario('favorite one restaurant', ({I}) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/favorite');
+  I.amOnPage('/#/favorite');
   I.seeElement('restaurant-item');
 });
 
@@ -33,7 +33,7 @@ Scenario('unfavorite one restaurant', ({I}) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/favorite');
+  I.amOnPage('/#/favorite');
   I.seeElement('restaurant-item');
 
   I.click(locate('.content h3.name a').at(1));
@@ -41,6 +41,6 @@ Scenario('unfavorite one restaurant', ({I}) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/favorite');
+  I.amOnPage('/#/favorite');
   I.see('Tidak ada restaurant favorite', '.restaurant-list p');
 });

@@ -17,7 +17,7 @@ class RestaurantItem extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="restaurant" tabindex="0">
-          <img src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}"
+          <img data-src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}"
               class="image lazyload" alt="restaurant image">
           <div class="content">
               <h3 class="name"><a href="#/detail/${this._restaurant.id}">${
